@@ -10,11 +10,12 @@ body {
     width: 100%;
     max-width: 1360px;
     gap: 68px;
-}
+} 
 
 .categories-block {
     display: block;
     margin: 80px 0;
+    /* padding-left: 10%; */
 }
 
 .categories {
@@ -66,5 +67,5 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 20px;
-    margin-right: 32px;
+    margin: 10px 32px 0 0;
 }
