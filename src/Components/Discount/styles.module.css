@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.div_discount{
+   background: linear-gradient(261deg, #0b710b 32.63%, #393 98.96%);  
+   text-align: center;
+   margin:80px 40px 0 40px; ;
+   border-radius: 12px;
+} 
+
+
+
+.p_title{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 70.4px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 32px;
+}
+
+
+
+.div_img_form{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px ;
+  padding-left: 32px;
+}
+
+
+.image{
+ width: 52%;
+}
+
+.div_Form{
+  margin-right: 40px;
+}
+
+
+.form{ 
+    width: 88%; 
+    position: relative;
+    text-align: start;
+    padding-top: 32px;
+    margin-left: 32px;
+    padding-bottom: 32px;
+} 
+
+.error{
+  color:blue;
+  font-size: 10px;  
+}
+
+
+form input {
+  width: 100%;
+  padding: 16px 32px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  background: transparent;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+
+.form input::placeholder{
+  font-size: 20px;
+  color: #fff;
+  line-height: 58px;
+  padding-top: 2px;
+  gap:10px;
+  margin-right: 20px;
+}
+
+
+.form button{
+  background: #FFF;
+  width: 516px;
+  width:100%;
+  padding: 16px 32px;
+  align-items: center;
+  border-radius: 6px;
+  color: #282828;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-top: 28px;
+}
+
+.form button:hover{
+  background: #282828;
+  color:#fff;
+  transition: 0.5s;
+}
+
+
+@media(max-width:1000px){
+
+  .div_discount{
+    position: relative;
+    width: 960px;
+    height: 434px;
+    margin:60px 20px;
+  }
+ .p_title{
+    position: relative;
+    width: 960px;
+    height: 70px;
+ }
+ .form{
+    position: relative;
+    margin-bottom: 30px;
+    width: Fixed (450px);
+    height: Hug (276px);
+    gap: 20px;
+
+ }
+  .imageForm{
+    width: 602px;
+    height: 308px;
+ }
+ .form input{
+    width: 450px;
+    height: 58px;
+    margin-bottom: 16px;
+ }
+ .button{
+    margin-top: 10px;
+    width: 450px;
+    height: 58px;
+ }
+ } 
+
+ @media(max-width:768px){
+
+  .div_discount{
+    width: 730px;
+  }
+ .p_title{
+  font-size: 56px;
+  
+ }
+ .imageForm{
+    width: 340px;
+    bottom: -72px;
+    left: -8px;
+
+ }
+  .form input{
+    width: 294px;
+ }
+  .button{
+    width: 294px;
+ }
+} 
+
+ @media(max-width:480px){
+
+  .div_discount{
+    width: 440px;
+    height: 590px;
+    margin: 56px 20px;
+    
+  }
+ .p_title{
+  padding-top: 24px;
+  font-size: 48px;
+ }
+ 
+ .form{
+  position: absolute;
+  top: 120px;
+  right: -20px;
+  
+ }
+ .imageForm{
+  width: 400px;
+  height: 200px;
+  left: 22px;
+  top: 393px;
+
+ }
+ .form input{
+  position: relative;
+  width: 400px;
+  height: 47px;
+  font-size: 18px;
+  margin-bottom: 8px;
+
+ }
+ .button{
+  width: 400px;
+ }
+ } 
+
+@media(max-width:360px){
+
+  .div_discount{
+    width: 320px;
+    
+  }
+ .p_title{
+  font-size: 40px;
+ }
+ .imageForm{
+  width: 310px;
+  height: 232px;
+  left: 8px;
+  top: 398px;
+
+ }
+ .form input{
+  position: relative;
+  width: 284px;
+ }
+}
+
+
+
+ 
