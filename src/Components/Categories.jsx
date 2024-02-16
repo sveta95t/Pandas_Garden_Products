@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'; 
 import axios from 'axios';
+import { Link } from 'react-router-dom'
  
 const URLIMAGE = 'http://localhost:3333/'; 
  
@@ -9,7 +10,7 @@ function Categories() {
   useEffect(() => { 
     async function fetchData() { 
       try { 
-        const response = await axios.get('http://localhost:3333/categories/'); 
+        const response = await axios.get('http://localhost:3333/categories/all'); 
         setCategories(response.data); 
       } catch (error) { 
         console.error('Error fetching categories:', error); 
@@ -23,15 +24,19 @@ function Categories() {
     <div className='categories-block'> 
       <div className='categories'>
         <h3 className='categories-h3'>Categories</h3> 
-        <div className="line"></div> 
+        <div className="line"></div>
+        <Link to={"/AllCategories"}>
         <button className='categories-b'>All categories</button> 
+        </Link>
       </div>
  
       <div className='categories-list'> 
         {categories.slice(0, 4).map((category) => ( 
           <div key={category.id}> 
+          <Link to={"categories/:id"} className='categories-link'>
             <img className='category-img' src={`${URLIMAGE}${category.image}`} alt={category.title} /> 
             <p className="category-title">{category.title}</p> 
+          </Link>
           </div> 
         ))} 
       </div> 
