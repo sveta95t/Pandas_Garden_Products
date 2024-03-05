@@ -1,13 +1,13 @@
 import Categories from "../Components/Categories";
-import Contact from "../Components/Contact";
 import React from 'react'
+import Header from "../Components/Header";
 
 function MainPage() {
   return (
     <>
-        <Categories />
-        
-        <Contact />
+      <Header />
+      <Categories />
+
     </>
   )
 }
