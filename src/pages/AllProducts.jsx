@@ -4,9 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getProducts } from '../store/actions/productsActions';
 import { Link } from 'react-router-dom'
 import ProductCard from '../Components/ProductCard';
-import ProCategoryFilter from '../Components/filtres/ProductsFilter.jsx/ProCategoryFilter';
+import ProductsFilter from '../Components/filtres/ProductsFilter.jsx/ProductsFilter';
 
-const URLIMAGE = 'http://localhost:3333'; 
 
 function AllProducts() {
   const dispatch = useDispatch();
@@ -22,6 +21,7 @@ function AllProducts() {
     return <h1>{error}</h1>;
   }
 
+
   return (
     <div>
       <div className='buttons'>
@@ -31,7 +31,7 @@ function AllProducts() {
       </div>
       <h3 id='h1-pages'>All products</h3>
 
-      <ProCategoryFilter />
+      <ProductsFilter />
 
       <div className='products-list'>
         {products.map(item => <ProductCard product={item}/>)}

@@ -1,20 +1,24 @@
 import React from 'react';
 import styles from './styles.module.css';
+import { useDispatch } from 'react-redux';
+import { sortByValueAction } from '../../../store/reducers/productsReducer';
 
 
-function ProCategoryFilter({ sortBy, setSortBy,filterByDiscount, setFilterByDiscount, filterByPriceRange, setFilterByPriceRange }) {
+function ProductsFilter() {
+
+  const dispatch = useDispatch()
 
   const handleSortChange = (e) => {
-    setSortBy(e.target.value);
+    dispatch(sortByValueAction(e.target.value));
   };
 
   const handleDiscountFilterChange = (e) => {
-    setFilterByDiscount(e.target.checked);
+   // setFilterByDiscount(e.target.checked);
   };
 
   const handlePriceRangeChange = (e) => {
     const { name, value } = e.target;
-    setFilterByPriceRange(prevRange => ({ ...prevRange, [name]: value }));
+//    setFilterByPriceRange(prevRange => ({ ...prevRange, [name]: value }));
   };
 
     return (
@@ -25,32 +29,32 @@ function ProCategoryFilter({ sortBy, setSortBy,filterByDiscount, setFilterByDisc
                     type="number"
                     name="min"
                     placeholder="from"
-                    onChange={handlePriceRangeChange} 
+             //       onChange={handlePriceRangeChange} 
                 /> 
             </div>
             <input
                 type="number"
                 name="max"
                 placeholder="to"
-                onChange={handlePriceRangeChange}
+             //   onChange={handlePriceRangeChange}
             />
             <div>
                 <label>Discounted items </label>
                 <input type="checkbox"
                     className={styles.checkbox}
-                    checked={filterByDiscount}
-                    placeholderonChange={handleDiscountFilterChange}
+              //      checked={filterByDiscount}
+             //       placeholderonChange={handleDiscountFilterChange}
                 />
             </div>
             <label>Sorted</label>
-            <select value={sortBy} onChange={handleSortChange}>
+            <select onChange={handleSortChange}>
                 <option value="default">by default</option>
-                <option value="newest"> Newest</option>
-                <option value="price-high-low">Price: High to Low</option>
-                <option value="price-low-high">Price: Low to High</option>
+                <option value="newest">newest</option>
+                <option value="price-high-low">price: high-low</option>
+                <option value="price-low-high">price: low-high</option>
             </select>
         </div>
     )
 }
 
-export default ProCategoryFilter;
+export default ProductsFilter;
