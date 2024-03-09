@@ -34,7 +34,7 @@ function Categories() {
       <div className='categories-list'> 
         {Array.isArray(categories) && categories.slice(0, 4).map((category) => ( 
           <div key={category.id}> 
-          <Link to={"categories/:id"} className='categories-link'>
+          <Link to={`/categories/${category.id}`} className='categories-link'>
             <img className='category-img' src={`${URLIMAGE}${category.image}`} alt={category.title} /> 
             <p className="category-title">{category.title}</p> 
           </Link>

@@ -6,8 +6,8 @@ import Categories from "./Components/Categories";
 import Nav from "./Components/Nav";
 import AllProducts from "./pages/AllProducts";
 import Contact from "./Components/Contact";
-import ProductCard from "./Components/ProductCard";
 import AllSales from "./pages/AllSales";
+import ProductsByCategory from "./pages/ProductsByCategory";
 
 function App() {
   return (
@@ -18,7 +18,8 @@ function App() {
         <Route path="/" element={<MainPage />}/>
         <Route path="categories" element={<Categories />}/>
         <Route path="/AllCategories" element={<AllCategories />}/>
-        <Route path="categories/:id" element={<Categories />}/>
+        <Route path="/categories/:id" element={<ProductsByCategory />}/>
+        <Route path="/AllCategories/categories/:id" element={<ProductsByCategory />}/>
         <Route path="/AllProducts" element={<AllProducts/>}/>
         <Route path="/AllSales" element={<AllSales/>}/>
       </Routes>

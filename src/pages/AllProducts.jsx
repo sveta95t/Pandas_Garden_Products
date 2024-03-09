@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getProducts } from '../store/actions/productsActions';
 import { Link } from 'react-router-dom'
 import ProductCard from '../Components/ProductCard';
+import ProCategoryFilter from '../Components/filtres/ProductsFilter.jsx/ProCategoryFilter';
 
 const URLIMAGE = 'http://localhost:3333'; 
 
@@ -28,7 +29,9 @@ function AllProducts() {
         <div className='all-line'></div>
         <Link className='pages-button' to={"/AllProducts"}>All products</Link>
       </div>
-      <h3 id='products-h3'>All products</h3>
+      <h3 id='h1-pages'>All products</h3>
+
+      <ProCategoryFilter />
 
       <div className='products-list'>
         {products.map(item => <ProductCard product={item}/>)}

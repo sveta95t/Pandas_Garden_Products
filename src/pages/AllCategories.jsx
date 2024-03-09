@@ -29,12 +29,12 @@ function AllCategories() {
       </div>
 
       <div className='all-categories'>
-          <h3 className='all-categories-h3'>Categories</h3> 
+          <h1 className='all-categories-h3'>Categories</h1> 
 
           <div className='all-categories-list'> 
           {categories.map((category) => ( 
             <div key={category.id}> 
-            <Link to={"categories/:id"} className='categories-link'>
+            <Link to={`/AllCategories/categories/${category.id}`} className='categories-link'>
               <img 
                 className='all-category-img' 
                 src={`${URLIMAGE}${category.image}`} 

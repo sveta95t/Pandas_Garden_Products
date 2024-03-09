@@ -14,7 +14,7 @@ function Header() {
     <div 
     id='header' 
     style={ backgroundStyle }>
-      <h2 id='header-h2'>Amazing Discounts on Garden Products!</h2>
+      <h1 id='header-h1'>Amazing Discounts on Garden Products!</h1>
       <Link id='header-b'>Check out</Link>
     </div>
   )

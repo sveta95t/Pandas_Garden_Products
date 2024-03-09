@@ -7,6 +7,9 @@ import AllCategories from './AllCategories.css';
 import Nav from './Nav.css';
 import AllProducts from './AllProducts.css';
 import Header from './Header.css'
+import AllSales from './AllSales.css';
+import ProductsByCategory from './ProductsByCategory.css';
+import Sale from './Sale.css';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import {store} from './store';
