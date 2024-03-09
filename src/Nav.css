@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+#navigation {
+    width: 100%;
+    height: 128px;
+    display: block;
+    justify-content: space-between;
+}
+
+#navigation-list {
+    padding: 25px 4%;
+    display: flex;
+}
+
+#nav-links {
+    width: 100%;
+    margin: 25px 13%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link {
+    margin: 0 2.5%;
+    color: black;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.active {
+    color: #339933;
+    margin: 0 2.5%;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#nav-backet {
+    margin-top: 9px;
+}
+
+#nav-line {
+    width: 100%;
+    height: 0px;
+    border: 1px #dddddd7c solid;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+
+@media (max-width: 1400px)  {
+    #nav-links {
+        margin: auto 12%;
+    }
+}
+
+@media (max-width: 990px) {
+    #nav-links {
+        margin: auto 3.6%;
+    }
+}
+
+@media (max-width: 770px) {
+    #nav-links {
+        display: none;
+    }
+
+    #navigation {
+        position: relative;
+    }
+
+    #nav-backet {
+        position: absolute;
+        right: 90px;
+    }
+
+    .menu {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 70px;
+    }
+    
+    .menu-icon {
+        display: flex;
+        cursor: pointer;
+    }
+    
+    .dropdown-menu {
+        display: none;
+    }
+    
+    .dropdown-menu.show {
+        position: absolute;
+        height: 200px;
+        top: 100%;
+        left: -90px;
+        background: white;
+        border: 1px solid #ccc;
+        /* border-radius: 5px; */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        display: block;
+    }
+    
+    .menu-nav {
+        display: flex;
+        text-decoration: none;
+        color: black;
+        width: 110px;
+        height: 30px;
+        margin: 5px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width: 1400px)  {
+ 
+}
+
+@media (max-width: 990px) {
+
+}
+
+@media (max-width: 770px) {
+
+}
+
+@media (max-width: 571px) {
+
+} */

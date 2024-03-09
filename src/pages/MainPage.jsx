@@ -1,13 +1,16 @@
 import Categories from "../Components/Categories";
-import Contact from "../Components/Contact";
 import React from 'react'
+import Header from "../Components/Header";
+import Sale from "../Components/Sale";
+import Discount from "../Components/Discount/Discount";
 
 function MainPage() {
   return (
     <>
-        <Categories />
-        
-        <Contact />
+      <Header />
+      <Categories />
+      <Discount />
+      <Sale />
     </>
   )
 }

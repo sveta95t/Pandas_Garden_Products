@@ -1,24 +1,25 @@
-import React, { useState, useEffect } from 'react'; 
-import axios from 'axios';
+import React from 'react';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getCategories } from '../store/actions/categoriesActions';
 import { Link } from 'react-router-dom'
  
-const URLIMAGE = 'http://localhost:3333/'; 
+const URLIMAGE = 'http://localhost:3333'; 
  
 function Categories() { 
-  const [categories, setCategories] = useState([]); 
- 
-  useEffect(() => { 
-    async function fetchData() { 
-      try { 
-        const response = await axios.get('http://localhost:3333/categories/all'); 
-        setCategories(response.data); 
-      } catch (error) { 
-        console.error('Error fetching categories:', error); 
-      } 
-    } 
- 
-    fetchData(); 
-  }, []); 
+  const dispatch = useDispatch();
+  const categories = useSelector((state) => state.categories.categories);
+  const error = useSelector((state) => state.error);
+
+  useEffect(() => {
+    dispatch(getCategories());
+  }, []);
+
+  if (error) {
+    return <h1>{error}</h1>;
+  }
+
+  // console.log('categories', categories)
  
   return ( 
     <div className='categories-block'> 
@@ -31,9 +32,9 @@ function Categories() {
       </div>
  
       <div className='categories-list'> 
-        {categories.slice(0, 4).map((category) => ( 
+        {Array.isArray(categories) && categories.slice(0, 4).map((category) => ( 
           <div key={category.id}> 
-          <Link to={"categories/:id"} className='categories-link'>
+          <Link to={`/categories/${category.id}`} className='categories-link'>
             <img className='category-img' src={`${URLIMAGE}${category.image}`} alt={category.title} /> 
             <p className="category-title">{category.title}</p> 
           </Link>

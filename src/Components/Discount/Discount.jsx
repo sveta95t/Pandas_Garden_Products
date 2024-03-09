@@ -1,6 +1,6 @@
 import styles from "./styles.module.css"
 import Img from "../../assets/img/disc.png"
-import styled from "styled-components";
+// import styled from "styled-components";
 import {useForm} from "react-hook-form"
 import { useState } from "react";
 
